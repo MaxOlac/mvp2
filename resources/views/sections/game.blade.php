@@ -1,8 +1,9 @@
     <section class="features" id="features">
+
       <div class="container">
-        <div class="section-heading text-center">
+        <div class="text-center">
           <h2>Unlimited Features, Unlimited Fun</h2>
-          <p class="text-muted">Check out what you can do with this app theme!</p>
+          {{-- <p class="text-muted">Check out what you can do with this app theme!</p> --}}
           <hr>
         </div>
         <div class="row">
@@ -12,7 +13,8 @@
                 <div class="device">
                   <div class="screen">
                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                    {{-- <img src="img/demo-screen-1.jpg" class="img-fluid" alt=""> --}}
+                    @include('sections.chat')
                   </div>
                   <div class="button">
                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -27,6 +29,7 @@
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-screen-smartphone text-primary"></i>
+                    {{-- <img src="img/poggo1_hello.png" /> --}}
                     <h3>Device Mockups</h3>
                     <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
                   </div>
