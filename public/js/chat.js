@@ -69,36 +69,17 @@ $('document').ready(function(){
       });
 
       //-- Clear Chat
-      // resetChat();
+      resetChat();
 
       //-- Print Messages
       insertChat("me", "Hola!", 500);  
       insertChat("me", "Mi nombre es Poggo", 1500);  
-      setTimeout(
-              function(){                        
-                  $(".poggo").remove();
-              }, 3000);
+      
       // insertChat("you", "Hi, Pablo", 1500);
       // insertChat("me", "What would you like to talk about today?", 3500);
       // insertChat("you", "Tell me a joke",7000);
       // insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
       // insertChat("you", "LOL", 12000);
-      var watson = require('watson-developer-cloud');
 
-      var conversation = watson.conversation({
-        username: '{6bd5183c-67b8-4a18-860b-3762086a6037}',
-        password: '{gSdXuT4sIYfY}',
-        version: 'v1',
-        version_date: '2017-05-26'
-      });
-
-      conversation.message({
-        workspace_id: '837ea30b-9ed6-4ab0-b0c8-2c09a662bbe4',
-        input: {'text': 'Hello'}
-      },  function(err, response) {
-        if (err)
-          console.log('error:', err);
-        else
-          console.log(JSON.stringify(response, null, 2));
-      });
+      
 });

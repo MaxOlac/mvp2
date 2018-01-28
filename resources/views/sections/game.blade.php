@@ -1,11 +1,16 @@
     <section class="features" id="features">
 
       <div class="container">
+      
         <div class="text-center">
-          <h2>Unlimited Features, Unlimited Fun</h2>
+          <h2>¿Tienes personalidad de millonario?</h2>
+
           {{-- <p class="text-muted">Check out what you can do with this app theme!</p> --}}
           <hr>
         </div>
+        
+      
+        
         <div class="row">
           <div class="col-lg-4 my-auto">
             <div class="device-container">
