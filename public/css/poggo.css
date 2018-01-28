@@ -1,8 +1,6 @@
-.poggo{
-    float:right;
-    padding-left:10px;
-    position:absolute;
-    bottom:5px;
-    width:100%;
-    display:flex;
+.juego{
+	width: 200px;
+    height: 200px;
 }
+
+    

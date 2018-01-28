@@ -1,6 +1,8 @@
 $('document').ready(function(){
   console.log("ready");
-
+  var time=1000;
+  var turno=1;
+  var res = [0,0,0,0,0];
   $('input:text:first').focus();
       var me = {};
       // me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
@@ -55,8 +57,83 @@ $('document').ready(function(){
       }
 
       function resetChat(){
-          $("ul").empty();
+          $("ul_chat").empty();
       }
+
+      function more_time(){
+          time+=1500;
+      }
+      
+      function start(){
+        
+        insertChat("me", "¡Hola!", time);
+        more_time();
+        insertChat("me", "Soy Poggo, seré tu guia en este divertido camino.", time);
+        more_time();
+        insertChat("me", "¿Si tuvieras $100,000 qué comprarías?", time);
+        more_time();
+        game_show(time);
+             
+      }
+
+      function game_show(time){  
+        setTimeout(
+              function(){                        
+                  $("#game").show(); 
+              }, time);        
+      }
+
+      function game_1(id){  
+        if (id == "1") {  
+          insertChat("you", "Un carro");
+          res[0]=1;
+        } 
+        if (id == "2") {
+          insertChat("you", "Hago los XV's de mi hija");
+          res[0]=2;
+        } 
+        if (id == "3") {
+          insertChat("you", "Los ahorro");
+          res[0]=3;
+        } 
+        if (id == "4") {
+          insertChat("you", "Un seguro para la educación de mis hijos");
+          res[0]=4;
+        }
+         insertChat("me", "¿Qué harías con $5,000 pesos?",1500);
+         turno=2;
+         change_game();          
+      }
+
+      $('.juego').on("click",function(e) {
+        var id = $(this).attr("id");
+        console.log(id);
+        if (turno == 1) {
+          game_1(id);
+        }
+      })
+
+      function change_game(){
+        setTimeout(
+          function(){                                        
+            if (turno == 2) {
+              $("#1").attr("src","img/juego/ahorro.jpeg");
+              $('#p_4').text("Invertir en bonos");
+              $('#p_2').text("Pagar tu tarjeta de credito");
+              $('#p_1').text("Comprar tu despensa mensual");
+              $('#p_3').text("Lo metes al cochinito");
+
+            } 
+            if (turno == 3) {
+              insertChat("you", "Los ahorro");
+            } 
+            if (turno == 4) {
+              insertChat("you", "Un seguro para la educación de mis hijos");
+            }
+        }, 3000);
+      }
+  
+      
 
       $('.mychat').on("keyup", function(e){
           if (e.which == 13){
@@ -72,14 +149,11 @@ $('document').ready(function(){
       resetChat();
 
       //-- Print Messages
-      insertChat("me", "Hola!", 500);  
-      insertChat("me", "Mi nombre es Poggo", 1500);  
+      $("#game").hide();
+      start();
       
-      // insertChat("you", "Hi, Pablo", 1500);
-      // insertChat("me", "What would you like to talk about today?", 3500);
-      // insertChat("you", "Tell me a joke",7000);
-      // insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
-      // insertChat("you", "LOL", 12000);
+      
+
 
       
 });

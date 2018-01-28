@@ -29,37 +29,39 @@
             </div>
           </div>
           <div class="col-lg-8 my-auto">
-            <div class="container-fluid">
-              <div class="row">
+            <div class="container-fluid" id="game">
+              <div class="row" >
                 <div class="col-lg-6">
                   <div class="feature-item">
-                    <i class="icon-screen-smartphone text-primary"></i>
+                    {{-- <i class="icon-screen-smartphone text-primary"></i> --}}
+                    <img class="juego" src="img/juego/carro.jpeg"  id = "1">
                     {{-- <img src="img/poggo1_hello.png" /> --}}
-                    <h3>Device Mockups</h3>
-                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                    
+                    <p class="text-muted" id = "p_1">Un Carro</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="feature-item">
-                    <i class="icon-camera text-primary"></i>
-                    <h3>Flexible Use</h3>
-                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                    {{-- <i class="icon-camera text-primary"></i> --}}
+                    <img class="juego" src="img/juego/15s.jpeg" id = "2">
+                    
+                    <p class="text-muted" id = "p_2">Hago los XV's de mi hija</p>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6">
                   <div class="feature-item">
-                    <i class="icon-present text-primary"></i>
-                    <h3>Free to Use</h3>
-                    <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                    {{-- <i class="icon-present text-primary"></i> --}}
+                    <img class="juego" src="img/juego/ahorro.jpeg" id = "3">
+                    <p class="text-muted" id = "p_3">Los ahorro</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="feature-item">
-                    <i class="icon-lock-open text-primary"></i>
-                    <h3>Open Source</h3>
-                    <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+                    {{-- <i class="icon-lock-open text-primary"></i> --}}
+                    <img class="juego" src="img/juego/educacion.jpeg" id = "4">
+                    <p class="text-muted" id = "p_4">Un seguro para la educación de mis hijos</p>
                   </div>
                 </div>
               </div>
